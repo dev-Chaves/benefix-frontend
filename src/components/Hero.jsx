@@ -3,7 +3,7 @@ const Hero = () => {
     <div className="flex justify-center items-center min-h-screen">
       <section className="w-full max-w-8xl">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-          <div className="p-24" >
+          <div className="p-24 flex flex-col" >
             <h2 className="font-bold text-center md:text-left">
               Sobre o Benefix
             </h2>
@@ -14,8 +14,8 @@ const Hero = () => {
                 Esse é o Benefix
             </span>
           </div>
-          <div className="flex justify-center">
-            <img className="w-[720px]" src="/mockup.png" alt="" />
+          <div className="flex justify-center items-center">
+            <img className="w-md hover:w-xl transition-all duration-500" src="/mockup.png" alt="" />
           </div>
         </div>
       </section>
