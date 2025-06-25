@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Croissant+One&family=DM+Serif+Text:ital@0;1&display=swap');
+
 @import "tailwindcss";
+
+@layer base{
+  h1{
+    font-size: var(--text-4xl);
+    color: #262626;
+
+  }
+
+  h2 {
+    font-size: var(--text-6xl);
+    color: #262626;
+  }
+
+  p{
+    color: #262626;
+    font-size: var(--text-1xl);
+  }
+
+}
+
+
+@theme{
+  
+  --font-Logo: Croissant One, serif; 
+  --font-Titulos:  Cambo, serif
+  --font-Texto: DM Serif Text, serif;
+
+
+  --color-text: #262626;
+  --color-principal: #9CB8A2;
+  --color-durk: #3D5851;
+  --color-background: #fff8db;
+
+}

@@ -2,9 +2,9 @@ import NavLink from "./NavLink"
 
 const NavBar = () => {
   return (
-    <nav className="mx-auto flex justify-between bg-blue-300 rounded-4xl p-4 top-4 sticky">
+    <nav className="mx-12 mt-8 mb-12 flex justify-between bg-principal rounded-4xl p-4">
         <div>
-            <h1 className="text-2xl">Benefix</h1>
+            <h1 className="text-2xl text-background font-Logo">Benefix</h1>
         </div>
 
         <div className="flex gap-6">
