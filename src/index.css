@@ -4,13 +4,13 @@
 
 @layer base{
   h1{
-    font-size: var(--text-4xl);
+    font-size: var(--text-8xl);
     color: #262626;
 
   }
 
   h2 {
-    font-size: var(--text-6xl);
+    font-size: var(--text-5xl);
     color: #262626;
   }
 
