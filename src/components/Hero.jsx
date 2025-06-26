@@ -18,7 +18,6 @@ const Hero = () => {
               Benefix surgiu a partir de um desafio de um Hackathon gerenciado pelo coordenador da minha Universidade, apartir dessa demanda selecionada, desenvolvemos
             </p>
           </div>
-          {/* Coluna da imagem */}
           <div className="flex justify-center items-center group">
             <img 
               className="

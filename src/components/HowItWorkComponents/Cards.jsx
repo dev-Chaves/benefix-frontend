@@ -3,7 +3,7 @@ const Cards = ({title, description}) => {;
 
   return (
     <div className="
-        bg-white/40
+        bg-more-durk
         backdrop-blur-xl
         bg-gradient-to-br from-white/25 to white/5
         border border-white/20
@@ -19,8 +19,8 @@ const Cards = ({title, description}) => {;
         ease-out
         cursor-pointer
     ">
-        <h3 className=" mb-6">{title}</h3>
-        <p className="mt-8">{description}</p>
+        <h3 className="text-background mb-6">{title}</h3>
+        <p className="text-background mt-8">{description}</p>
     </div>
   )
 }

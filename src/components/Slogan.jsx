@@ -5,8 +5,7 @@ const Slogan = () => {
         <h1 className="font-Logo text-6xl md:text-8xl font-semi mb-2">Benefix</h1>
         <h2 className="text-2xl md:text-4xl mb-2">Conectando Empresas, Simplificando Benefícios.</h2>
         <h3 className="text-base md:text-lg text-gray-700">
-            Plataforma completa para administração de benefícios, parcerias estratégicas e suporte inteligente via IA.
-        </h3>
+            Plataforma completa para administração de benefícios, parcerias estratégicas e suporte</h3>
     </div>
   )
 }
