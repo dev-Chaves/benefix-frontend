@@ -5,7 +5,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="mx-12 mt-8 mb-12 shadow-lg flex flex-wrap justify-between bg-principal rounded-4xl p-4">
+    <nav className="mx-12 mt-8 mb-12 shadow-lg flex flex-wrap justify-between bg-principal rounded-4xl p-4 sticky top-4 z-50">
         <div className="flex items-center">
             <h1 className="text-2xl text-background font-Logo">Benefix</h1>
         </div>
@@ -24,6 +24,9 @@ const NavBar = () => {
         <div className={`${isOpen ? 'flex' : 'hidden'} md:flex w-full md:w-auto flex-col md:flex-row gap-6 mt-4 md:mt-0`}>
             <NavLink href="#sobre">Sobre</NavLink>
             <NavLink href="#beneficios">Benefícios</NavLink>
+            <NavLink href="#como-funciona">Como Funciona</NavLink>
+            <NavLink href="#depoimentos">Depoimentos</NavLink>
+            <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#contato">Contato</NavLink>
         </div>
     </nav>
