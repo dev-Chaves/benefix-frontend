@@ -1,5 +1,6 @@
 import NavLink from "./NavLink"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +22,21 @@ const NavBar = () => {
           <span className={`h-0.5 w-6 bg-background transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
-        <div className={`${isOpen ? 'flex' : 'hidden'} md:flex w-full md:w-auto flex-col md:flex-row gap-6 mt-4 md:mt-0`}>
+        <div className={`${isOpen ? 'flex' : 'hidden'} md:flex w-full md:w-auto flex-col md:flex-row gap-6 mt-4 md:mt-0 items-center`}>
             <NavLink href="#sobre">Sobre</NavLink>
             <NavLink href="#beneficios">Benefícios</NavLink>
             <NavLink href="#como-funciona">Como Funciona</NavLink>
             <NavLink href="#depoimentos">Depoimentos</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#contato">Contato</NavLink>
+            
+            {/* Link para área administrativa */}
+            <Link 
+              to="/admin/login"
+              className="bg-background text-principal px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-sm"
+            >
+              🔐 Admin
+            </Link>
         </div>
     </nav>
   )

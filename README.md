@@ -36,24 +36,59 @@ O Benefix é uma plataforma completa de gestão de benefícios corporativos que 
 - Controle de custos em tempo real
 - Insights para otimização
 
+## 🔐 Área Administrativa
+
+### Acesso Rápido
+- **URL**: `/admin/login`
+- **Botão**: Clique em "🔐 Admin" na navbar
+
+### Credenciais de Teste
+Para testar a área administrativa:
+
+1. **Registre-se** em `/admin/register` com:
+   - Username: `admin`
+   - Password: `Admin123`
+   - Token: `ADMIN2024` (ou `BENEFIX_ADMIN`, `SUPER_TOKEN`)
+
+2. **Faça login** em `/admin/login` com as credenciais criadas
+
+### Funcionalidades Admin
+- 📊 **Dashboard** com estatísticas em tempo real
+- 👥 **Gerenciamento de usuários**
+- 🏢 **Controle de empresas**
+- 🎁 **Configuração de benefícios**
+- 📈 **Relatórios detalhados**
+- ⚙️ **Configurações do sistema**
+
+> 📖 **Documentação completa**: Veja [ADMIN_GUIDE.md](./ADMIN_GUIDE.md) para instruções detalhadas
+
 ## 🏗️ Estrutura do Projeto
 
 ```
 src/
 ├── components/
-│   ├── NavBar.jsx          # Navegação principal
-│   ├── Slogan.jsx          # Seção hero com CTAs
-│   ├── Hero.jsx            # Sobre a empresa e valores
-│   ├── Benefits.jsx        # Principais benefícios
-│   ├── Statistics.jsx      # Números e estatísticas
-│   ├── HowItWorks.jsx      # Como funciona a plataforma
-│   ├── Testimonials.jsx    # Depoimentos de clientes
-│   ├── FAQ.jsx             # Perguntas frequentes
-│   ├── CallToAction.jsx    # Chamada para ação
-│   ├── Footer.jsx          # Rodapé com informações
-│   └── NavLink.jsx         # Componente de link
+│   ├── admin/                  # Componentes administrativos
+│   │   ├── AdminLayout.jsx     # Layout base admin
+│   │   └── AdminSidebar.jsx    # Sidebar de navegação
+│   ├── NavBar.jsx              # Navegação principal
+│   ├── Slogan.jsx              # Seção hero com CTAs
+│   ├── Hero.jsx                # Sobre a empresa e valores
+│   ├── Benefits.jsx            # Principais benefícios
+│   ├── Statistics.jsx          # Números e estatísticas
+│   ├── HowItWorks.jsx          # Como funciona a plataforma
+│   ├── Testimonials.jsx        # Depoimentos de clientes
+│   ├── FAQ.jsx                 # Perguntas frequentes
+│   ├── CallToAction.jsx        # Chamada para ação
+│   ├── Footer.jsx              # Rodapé com informações
+│   ├── NavLink.jsx             # Componente de link
+│   └── ProtectedRoute.jsx      # Proteção de rotas
+├── contexts/
+│   └── AuthContext.jsx         # Contexto de autenticação
 ├── pages/
-│   └── LandingPage.jsx     # Página principal
+│   ├── LandingPage.jsx         # Página principal
+│   ├── Login.jsx               # Login administrativo
+│   ├── Register.jsx            # Registro administrativo
+│   └── AdminDashboard.jsx      # Dashboard admin
 └── assets/
     └── react.svg
 ```
@@ -98,6 +133,21 @@ npm run dev
 npm run build
 ```
 
+## 🌐 Rotas da Aplicação
+
+### Públicas
+- `/` - Landing page principal
+- `/admin/login` - Login administrativo
+- `/admin/register` - Registro administrativo
+
+### Protegidas (Requer autenticação)
+- `/admin/dashboard` - Dashboard administrativo
+- `/admin/users` - Gerenciamento de usuários
+- `/admin/companies` - Gerenciamento de empresas
+- `/admin/benefits` - Configuração de benefícios
+- `/admin/reports` - Relatórios
+- `/admin/settings` - Configurações
+
 ## 📱 Seções da Landing Page
 
 1. **Navegação** - Menu sticky com links para todas as seções
@@ -122,6 +172,16 @@ npm run build
 - ✅ Valores e missão da empresa
 - ✅ Footer completo com informações de contato
 
+### Área Administrativa
+- ✅ Sistema completo de autenticação
+- ✅ Registro com validação de token
+- ✅ Login seguro com validações
+- ✅ Dashboard administrativo
+- ✅ Rotas protegidas
+- ✅ Layout responsivo para admin
+- ✅ Sidebar de navegação
+- ✅ Contexto de autenticação global
+
 ### Experiência do Usuário
 - ✅ Navegação sticky com scroll suave
 - ✅ Animações e transições elegantes
@@ -129,6 +189,7 @@ npm run build
 - ✅ Botões de call-to-action estratégicos
 - ✅ Design responsivo para mobile
 - ✅ Indicadores visuais e badges
+- ✅ Roteamento com React Router
 
 ### Design Visual
 - ✅ Gradientes e sombras modernas
@@ -145,6 +206,22 @@ npm run build
 - **24/7** Suporte disponível
 - **60%** Redução no tempo administrativo
 - **40%** Redução em custos operacionais
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **React 18** - Biblioteca principal
+- **Vite** - Build tool e dev server
+- **React Router DOM** - Roteamento
+- **Tailwind CSS** - Framework CSS
+- **Context API** - Gerenciamento de estado
+
+### Funcionalidades
+- **Autenticação** - Sistema de login/registro
+- **Roteamento** - Navegação entre páginas
+- **Responsividade** - Design adaptável
+- **Validação** - Formulários com validação
+- **Persistência** - LocalStorage para dados
 
 ## 🤝 Contribuição
 
