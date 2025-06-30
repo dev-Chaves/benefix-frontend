@@ -8,6 +8,9 @@ import LandingPage from './pages/LandingPage'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import AdminDashboard from './pages/AdminDashboard'
+import Users from './pages/Users'
+import Companies from './pages/Companies'
+import Benefits from './pages/Benefits'
 
 // Componentes
 import ProtectedRoute from './components/ProtectedRoute'
@@ -33,6 +36,30 @@ createRoot(document.getElementById('root')).render(
             element={
               <ProtectedRoute>
                 <AdminDashboard />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/users" 
+            element={
+              <ProtectedRoute>
+                <Users />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/companies" 
+            element={
+              <ProtectedRoute>
+                <Companies />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/benefits" 
+            element={
+              <ProtectedRoute>
+                <Benefits />
               </ProtectedRoute>
             } 
           />

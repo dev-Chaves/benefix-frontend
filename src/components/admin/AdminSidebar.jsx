@@ -23,16 +23,6 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
       path: '/admin/benefits',
       name: 'Benefícios',
       icon: '🎁'
-    },
-    {
-      path: '/admin/reports',
-      name: 'Relatórios',
-      icon: '📈'
-    },
-    {
-      path: '/admin/settings',
-      name: 'Configurações',
-      icon: '⚙️'
     }
   ];
 
@@ -50,18 +40,20 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
       
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50
+        fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 flex flex-col
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:z-auto
       `}>
-        <div className="p-6 border-b">
+        {/* Header */}
+        <div className="p-6 border-b flex-shrink-0">
           <Link to="/" className="flex items-center">
             <h2 className="text-xl font-Logo text-principal">Benefix</h2>
             <span className="ml-2 text-sm text-gray-500">Admin</span>
           </Link>
         </div>
         
-        <nav className="mt-6">
+        {/* Navigation */}
+        <nav className="mt-6 flex-1 overflow-y-auto">
           {menuItems.map((item) => (
             <Link
               key={item.path}
@@ -69,7 +61,7 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
               className={`
                 flex items-center px-6 py-3 text-left w-full transition-colors duration-200
                 ${isActive(item.path) 
-                  ? 'bg-principal text-background border-r-4 border-durk' 
+                  ? 'bg-principal text-white border-r-4 border-gray-800' 
                   : 'text-gray-700 hover:bg-gray-100'
                 }
               `}
@@ -81,10 +73,12 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
           ))}
         </nav>
         
-        <div className="absolute bottom-6 left-6 right-6">
+        {/* Footer Button */}
+        <div className="p-6 border-t flex-shrink-0">
           <Link
             to="/"
-            className="flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            className="flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 w-full"
+            onClick={() => setIsOpen(false)}
           >
             <span className="mr-2">🏠</span>
             <span>Voltar ao Site</span>
